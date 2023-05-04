@@ -9,32 +9,41 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/colors/color.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!---===== Style Switcher ====--->
+    <link rel="stylesheet" href="css/colors/color.css" class="alternate-style" title="color" disabled>
+    <link rel="stylesheet" href="css/colors/color-1.css" class="alternate-style" title="color-1" disabled>
+    <link rel="stylesheet" href="css/colors/color-2.css" class="alternate-style" title="color-2" disabled>
+    <link rel="stylesheet" href="css/colors/color-3.css" class="alternate-style" title="color-3" disabled>
+    <link rel="stylesheet" href="css/colors/color-4.css" class="alternate-style" title="color-4" disabled>
+    <link rel="stylesheet" href="css/style-switcher.css">
 </head>
 <body>
     <!-- Main Container Start -->
     <div class="main-container">
     <!-- Aside Start -->
-    <div class="aside">
-        <div class="logo">
-            <a href="#"><span>A</span>Guerrero</a>
-        </div>
-        <div class="nav-toggler">
-            <span></span>
+    <div class="aside" id="sidebar">
+        <div class="toggle-btn">
+            <span>&#9776;</span>
         </div>
         <ul class="nav">
-            <li><a href="#" class="active"><i class="fa fa-home"></i>Home</a></li>
-            <li><a href="#" ><i class="fa fa-user"></i>About</a></li>
-            <li><a href="#" ><i class="fa fa-list"></i>Services</a></li>
-            <li><a href="#" ><i class="fa fa-briefcase"></i>Projects</a></li>
-            <li><a href="#" ><i class="fa fa-comments"></i>Contact</a></li>
+            <li><a href="#home" class="active"><i class="fa fa-house"></i>Home</a></li>
+            <li><a href="#about"><i class="fa-sharp fa-regular fa-user"></i>About</a></li>
+            <li><a href="#service"><i class="fa fa-laptop-code"></i>Services</a></li>
+            <li><a href="#portfolio"><i class="fa fa-briefcase"></i>Projects</a></li>
+            <li><a href="#contact"><i class="fa  fa-message"></i>Contact</a></li>
         </ul>
     </div>
     <!-- Aside End -->
     <!-- Main Content Start -->
     <div class="main-content">
         <!-- Home Section Start -->
-        <section class="home section ">
+        <section class="home section" id="home">
             <div class="container">
+                <ul class="social-media">
+                    <li><a href="https://www.linkedin.com/in/andres-guerrero-00862a217/" ><i class="fa-brands fa-linkedin-in"></i></a></li>
+                    <li><a href="https://www.instagram.com/estebanguerrero95/?hl=es-la"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://github.com/andresguerrero270895"><i class="fa-brands fa-github"></i></a></li>
+                </ul>
                 <div class="row">
                     <div class="home-info padd-15">
                         <h3 class="hello">Hi, My Name Is <span class="name">Andres Guerrero</span></h3>
@@ -45,18 +54,18 @@
                         <a href="#contact" class="btn hire-me">Hire Me</a>    
                     </div>
                     <div class="home-img padd-15">
-                        <img src="images/andres.jpg" alt="">
+                        <img src="images/andres.png" alt="">                        
                     </div>
                 </div>
             </div>
         </section>
         <!-- Home Section End -->
         <!-- About Section Start -->
-        <section class="about section">
+        <section class="about section" id="about">
             <div class="container">
                 <div class="row">
                     <div class="section-title padd-15">
-                        <h2>About Me</h2>
+                        <h2>About Me.</h2>
                     </div>
                 </div>
                 <div class="row">
@@ -73,6 +82,22 @@
                                 interpretation and design of electronic drawings and operation manuals. </p>
                             </div>
                         </div>
+                        
+                        <div class="skills padd-15">
+                            <div class="row">
+                                <ul class="skill-item padd-15">
+                                    <li><a><i class="fa-brands fa-html5 fa-fade"></i></a><h4>HTML</h4></li>
+                                    <li><a><i class="fa-brands fa-css3 fa-fade"></i></a><h4>CSS3</h4></li>
+                                    <li><a><i class="fa-brands fa-js fa-fade"></i></a><h4>JS</h4></li>
+                                    <li><a><i class="fa-brands fa-react fa-fade"></i></a><h4>REACT</h4></li>
+                                    <li><a><i class="fa-brands fa-node-js fa-fade"></i></a><h4>NODEJS</h4></li>
+                                    <li><a><i class="fa-brands fa-wordpress fa-fade"></i></a><h4>WORDPRESS</h4></li>
+                                    <li><a><i class="fa-brands fa-github fa-fade"></i></a><h4>GITHUB</h4></li>
+
+                                </ul>                                    
+                            </div>
+                        </div>
+                       
                         <div class="row">
                             <div class="personal-info padd-15">
                                 <div class="row">
@@ -81,19 +106,7 @@
                                     </div>
                                     <div class="info-item padd-15">
                                         <p>Age : <span>27</span></p>
-                                    </div>
-                                    <div class="info-item padd-15">
-                                        <p>Website : <span>www.domain.com</span></p>
-                                    </div>
-                                    <div class="info-item padd-15">
-                                        <p>Email : <span>guerrero9510@hotmail.com</span></p>
-                                    </div>
-                                    <div class="info-item padd-15">
-                                        <p>Degree : <span>Mechatronics Engineering</span></p>
-                                    </div>
-                                    <div class="info-item padd-15">
-                                        <p>Phone : <span>+57 3174957012</span></p>
-                                    </div>
+                                    </div>                                                                                                                                
                                     <div class="info-item padd-15">
                                         <p>City : <span>Medellin</span></p>
                                     </div>
@@ -101,56 +114,12 @@
                                         <p>Freelance : <span>Available</span></p>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="buttons padd-15">
-                                        <a href="#" class="btn">Download my CV</a>
-                                        <a href="#contact" class="btn hire-me">Hire Me</a>
-                                    </div>
-                                </div>
                             </div>
-                            <div class="skills padd-15">
-                                <div class="row">
-                                    <div class="skill-item padd-15">
-                                        <h5>TypeScript</h5>
-                                        <div class="progress">
-                                            <div class="progress-in" style="width: 50%;"></div>
-                                            <div class="skill-percent">50%</div>
-                                        </div>
-                                    </div>
-                                    <div class="skill-item padd-15">
-                                        <h5>WordPress</h5>
-                                        <div class="progress">
-                                            <div class="progress-in" style="width: 70%;"></div>
-                                            <div class="skill-percent">70%</div>
-                                        </div>
-                                    </div>
-                                    <div class="skill-item padd-15">
-                                        <h5>HTML</h5>
-                                        <div class="progress">
-                                            <div class="progress-in" style="width: 80%;"></div>
-                                            <div class="skill-percent">80%</div>
-                                        </div>
-                                    </div>
-                                    <div class="skill-item padd-15">
-                                        <h5>JS</h5>
-                                        <div class="progress">
-                                            <div class="progress-in" style="width: 80%;"></div>
-                                            <div class="skill-percent">80%</div>
-                                        </div>
-                                    </div>
-                                    <div class="skill-item padd-15">
-                                        <h5>PostgreSQL</h5>
-                                        <div class="progress">
-                                            <div class="progress-in" style="width: 80%;"></div>
-                                            <div class="skill-percent">80%</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            
                         </div>
                         <div class="row">
                             <div class="education">
-                                <h3 class="title">Education</h3>
+                                <h3 class="title"><i class="fa fa-user-graduate"></i> Education</h3>
                                 <div class="row">
                                     <div class="timeline-box padd-15">
                                         <div class="timeline shadow-dark">
@@ -177,7 +146,7 @@
                                 </div>
                             </div>
                             <div class="experience">
-                                <h3 class="title">Experience</h3>
+                                <h3 class="title"><i class="fa-solid fa-id-card"></i> Experience</h3>
                                 <div class="row">
                                     <div class="timeline-box padd-15">
                                         <div class="timeline shadow-dark">
@@ -188,7 +157,7 @@
                                                     <i class="fa fa-calendar"></i> August 2021- Current
                                                 </h3>
                                                 <h4 class="timeline-title">Front End Developer WordPress</h4>
-                                                <p class="timeline-text">Design landing pages and plan advertising campaigns</p>
+                                                <p class="timeline-text">Design landing pages and plan advertising campaigns.</p>
                                             </div>
                                             <!-- timeline item  -->
                                             <div class="timeline-item">
@@ -197,12 +166,21 @@
                                                     <i class="fa fa-calendar"></i> March 2022 - September 2022
                                                 </h3>
                                                 <h4 class="timeline-title">Developer Node.js Freelancer</h4>
-                                                <p class="timeline-text">Build API servers and Maintain website</p>
+                                                <p class="timeline-text">Build API servers and Maintain website.</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="buttons-info padd-15">
+                                    <div class="row">
+                                        <div class="buttons padd-15">
+                                            <a href="#" class="btn">Download my CV</a>
+                                            <a href="#contact" class="btn">Hire Me</a>
+                                        </div>
+                                    </div>
+                                </div>
                         </div>
                     </div>
                 </div>
@@ -210,11 +188,11 @@
         </section>
         <!-- About Section End -->
         <!-- Services Section Start -->
-        <section class="service section">
+        <section class="service section" id="service">
             <div class="container">
                 <div class="row">
-                    <div class="section-tiltle padd-15">
-                        <h2>Services</h2>
+                    <div class="section-title padd-15">
+                        <h2>Services.</h2>
                     </div>
                 </div>
                 <div class="row">
@@ -222,10 +200,10 @@
                     <div class="service-item padd-15">
                         <div class="service-item-inner">
                             <div class="icon">
-                                <i class="fa fa-mobile-alt"></i>
+                                <i class="fa fa-database"></i>
                             </div>
-                            <h4>Web Design</h4>
-                            <p>My services include websites, icon illustrations, mobile apps, UI/UX, landing pages, email templates, blog customization, and more.
+                            <h4>API Server</h4>
+                            <p>My services include build, manage and deploy of rest apis using node js.
                             </p>   
                         </div>
                     </div>
@@ -237,7 +215,7 @@
                                 <i class="fa fa-laptop-code"></i>
                             </div>
                             <h4>Web Design</h4>
-                            <p>My services include websites, icon illustrations, mobile apps, UI/UX, landing pages, email templates, blog customization, and more.
+                            <p>My services include websites, Single Page Applications, UI/UX, landing pages, and eCommerce.
                             </p>   
                         </div>
                     </div>
@@ -246,10 +224,10 @@
                     <div class="service-item padd-15">
                         <div class="service-item-inner">
                             <div class="icon">
-                                <i class="fa fa-palette"></i>
+                                <i class="fa fa-business-time"></i>
                             </div>
-                            <h4>Web Design</h4>
-                            <p>My services include websites, icon illustrations, mobile apps, UI/UX, landing pages, email templates, blog customization, and more.</p>   
+                            <h4>Trafficker Digital</h4>
+                            <p>My services include develop and implement advertising campaigns on the internet, using Canva, WordPress and Facebook Business.</p>   
                         </div>
                     </div>
                     <!-- Service item End -->
@@ -257,47 +235,170 @@
                     <div class="service-item padd-15">
                         <div class="service-item-inner">
                             <div class="icon">
-                                <i class="fa fa-code"></i>
+                                <i class="fa fa-gears"></i>
                             </div>
-                            <h4>Web Design</h4>
-                            <p>My services include websites, icon illustrations, mobile apps, UI/UX, landing pages, email templates, blog customization, and more.</p>   
+                            <h4>Software Engineer</h4>
+                            <p>My services include PLC'S programming using TIA PORTAL, construction and interpretation of electronic plans and operation manuals.</p>   
                         </div>
                     </div>
                     <!-- Service item End -->
-                    <!-- Service item start -->
-                    <div class="service-item padd-15">
-                        <div class="service-item-inner">
-                            <div class="icon">
-                                <i class="fa fa-search"></i>
-                            </div>
-                            <h4>Web Design</h4>
-                            <p>My services include websites, icon illustrations, mobile apps, UI/UX, landing pages, email templates, blog customization, and more.</p>   
-                        </div>
-                    </div>
-                    <!-- Service item End -->
-                    <!-- Service item start -->
-                    <div class="service-item padd-15">
-                        <div class="service-item-inner">
-                            <div class="icon">
-                                <i class="fa fa-bullhorn"></i>
-                            </div>
-                            <h4>Web Design</h4>
-                            <p>My services include websites, icon illustrations, mobile apps, UI/UX, landing pages, email templates, blog customization, and more.</p>   
-                        </div>
-                    </div>
-                    <!-- Service item End -->
-                    
-
-
                 </div>
             </div>
         </section>
         <!-- Services Section End -->
+        <!-- Portfolio Section Start -->
+        <section class="portfolio section" id="portfolio">
+            <div class="container">
+                <div class="row">
+                    <div class="section-title">
+                        <h2>Portfolio.</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="portfolio-heading padd-15">
+                        <h2>MY LAST PROJECTS:</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Portfolio item Start -->
+                    <div class="portfolio-item padd-15">
+                        <div class="portfolio-item-inner shadow-dark">
+                            <div class="portfolio-img">
+                                <a  href="https://pi-countries-omega-seven.vercel.app/"><img src="images/portfolio/portfolio-1.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Portfolio item End -->
+                    <!-- Portfolio item Start -->
+                    <div class="portfolio-item padd-15">
+                        <div class="portfolio-item-inner shadow-dark">
+                            <div class="portfolio-img">
+                                <a  href="https://tresjota-ecommerce.vercel.app/userlogin"><img src="images/portfolio/portfolio-2.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Portfolio item End -->
+                    <!-- Portfolio item Start -->
+                    <div class="portfolio-item padd-15">
+                        <div class="portfolio-item-inner shadow-dark">
+                            <div class="portfolio-img">
+                                <a><img src="images/portfolio/portfolio-3.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Portfolio item End -->
+                </div>
+            </div>
+        </section>
+        <!-- Portfolio Section End -->
+        <!-- Contact Section Start -->
+        <section class="contact section" id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="section-title">
+                        <h2>Contact Me.</h2>
+                    </div>
+                </div>
+                <h3 class="contact-title padd-15">Have You Any Questions?</h3>
+                <div class="row">
+                    <!-- Contact info item start -->
+                    <div class="contact-info-item padd-15">
+                        <div class="icon"><i class="fa fa-phone"></i></div>
+                        <h4>Call Us On</h4>
+                        <p>+57 3174957012</p>
+                    </div>
+                    <!-- Contact info item End -->
+                    <!-- Contact info item start -->
+                    <div class="contact-info-item padd-15">
+                        <div class="icon"><i class="fa fa-map-marker-alt"></i></div>
+                        <h4>Location</h4>
+                        <p>Medellin</p>
+                    </div>
+                    <!-- Contact info item End -->
+                    <!-- Contact info item start -->
+                    <div class="contact-info-item padd-15">
+                        <div class="icon"><i class="fa fa-envelope"></i></div>
+                        <h4>Email</h4>
+                        <p>guerrero9510@hotmail.com</p>
+                    </div>
+                    <!-- Contact info item End -->
+                    <!-- Contact info item start -->
+                    <div class="contact-info-item padd-15">
+                        <div class="icon"><i class="fa fa-globe-americas"></i></div>
+                        <h4>Website</h4>
+                        <p>www.andresguerrero.com</p>
+                    </div>
+                    <!-- Contact info item End -->
+                    <h3 class="contact-titles padd-15">SEND ME AN EMAIL</h3>
+                    <!-- Contact Form -->
+                    <div class="contact-form padd-15">
+                        <div class="row">
+                            <div class="form-item col-6 padd-15">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Name">
+                                </div>
+                            </div>
+                        
+                        
+                            <div class="form-item col-6 padd-15">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Email">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-item col-12 padd-15">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Subject">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-item col-12 padd-15">
+                                <div class="form-group">
+                                    <textarea name="" class="form-control" id="" placeholder="Message"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="button-form padd-15">
+                                <button type="submit" class="btn">Send Message</button>
+                            </div>
+                        </div>                                               
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section End -->
+        
+
+
     </div>
     <!-- Main Content End -->
 </div>
 <!-- Main Container End -->
+<!-- Style Switcher Start -->
+<div class="style-switcher">
+    <div class="style-switcher-toggler s-icon">
+        <i class="fas fa-cog fa-spin"></i>
+    </div>
+    <div class="day-night s-icon">
+        <i class="fas fa-moon"></i>
+    </div>
+    <h4>Theme Colors</h4>
+    <div class="colors">
+        <span class="color" onclick="setActiveStyle('color')"></span>
+        <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+        <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+        <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+        <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+    </div>
+
+
+</div>
+<!-- Style Stitwer End -->
 <!--JS FILES -->
 <script src="js/script.js"></script>
+<script src="js/style-switcher.js"></script>
 </body>
 </html>

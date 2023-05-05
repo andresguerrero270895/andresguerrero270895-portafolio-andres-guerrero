@@ -260,16 +260,27 @@ h3.my-profession {
 
 .home-info p {
     margin-bottom: 70px;
-    font-size: 18px;
+    font-size: 16px;
     color: var(--text-black-700);
     text-align: justify;
 }
 
+.circle {
+    position: absolute;
+    background: var(--skin-color);
+    clip-path: circle(50%);
+    height: 450px;
+    width: 450px;
+    right: -90px;
+    top: -1px;
+   
+}
+
 .home .home-img img {
     position: absolute;
-    height: 550px;
-    top: -91px;
-    right: -44px;
+    height: 600px;
+    top: -151px;
+    right: -60px;
 }
 
 .home p{

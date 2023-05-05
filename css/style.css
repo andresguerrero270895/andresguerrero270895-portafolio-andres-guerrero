@@ -11,12 +11,12 @@
 body {
     line-height: 1.5;
     font-size: 16px;
-    font-family: 'Helvetica Now', sans-serif;
+    font-family: 'Futura', sans-serif;
 }
 
 body.dark {
     background-color: #0f0e0f;
-    --bg-black-900: #151515;
+    --bg-black-900: #0f0e0f;
     --bg-black-100: #222222;
     --bg-black-50: #393939;
     --text-black-900: #ffffff;
@@ -41,7 +41,6 @@ ul {
 }
 
 .main-content {
-    padding-left: 260px;
     background-color: var(--skin-color);
 }
 
@@ -50,6 +49,24 @@ ul {
     min-height: 100vh;
     display: block;
     padding: 0 30px;
+    opacity: 1;
+    position: fixed;
+    left: 270px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.3s ease;
+}
+
+.section.back-section{
+    z-index: 1;
+}
+
+.section.active {
+    z-index: 2;
     opacity: 1;
 }
 
@@ -84,7 +101,7 @@ ul {
     color: var(--text-black-900);
     font-weight: 700;
     position: relative;
-    font-family: 'Helvetica Now', sans-serif;
+    font-family: 'Helvetica Now', Helvetica, ;
 }
 
 .row {
@@ -102,7 +119,7 @@ ul {
     color: white;
     border-radius: 40px;
     white-space: nowrap;
-    display: inline-block;
+    
     background: var(--skin-color);
     transition: all 0.3s ease;
     border: none;
@@ -130,50 +147,22 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 500ms linear;
+    transition: all 0.3s ease;
+    z-index: 10;
 }
 
-.aside .nav-toggler {
-    height: 60px;
-    width: 45px;
-    border: 1px solid var(--bg-black-50);
-    cursor: pointer;
-    position: fixed;
-    left: 300px;
-    top: 20px;
-    border-radius:5px;
-    background: var(--bg-black-50);
-    display: none;
-    align-items: center;
-    justify-content: center;
+.aside .toggle-btn.open span {
+    background-color: transparent;
 }
 
-.aside .nav-toggler span {
-    height: 2px;
-    width: 18px;
-    background: var(--skin-color);
-    display: inline-block;
-    position: relative;
+.aside .toggle-btn span::before {
+    transform: rotate(45deg);
+    top: 0;
 }
 
-.aside .nav-toggler span::before{
-    content: '';
-    width: 18px;
-    height: 2px;
-    background: var(--skin-color);
-    position: absolute;
-    top: -6px;
-    left: 0;
-}
-
-.aside .nav-toggler span::after{
-    content: '';
-    width: 18px;
-    height: 2px;
-    background: var(--skin-color);
-    position: absolute;
-    top: 6px;
-    left: 0;
+.aside .toggle-btn span::after {
+    transform: rotate(-45deg);
+    top: 0;
 }
 
 .aside .nav {
@@ -205,9 +194,9 @@ ul {
 .aside .toggle-btn {
     position: absolute;
     left: 203px;
-    top: 1px;
+    top: -5px;
     cursor: pointer;
-    color: black;
+    color: var(--text-black-900);
 }
   
 .aside .toggle-btn span {
@@ -217,7 +206,7 @@ ul {
     font-size: 60px;
 }
 
-.aside.active {
+.aside.open {
     left: 0;
 }
 
@@ -279,7 +268,7 @@ h3.my-profession {
 .home .home-img img {
     position: absolute;
     height: 550px;
-    bottom: -80px;
+    top: -91px;
     right: -44px;
 }
 
@@ -352,7 +341,7 @@ h3.my-profession {
     
 }
 
-.about .about-content .buttons-info .btn {
+.about .about-content .buttons-info .hire-me {
     margin-top: 15px;
     margin-right: 15px;
 }
@@ -363,6 +352,7 @@ h3.my-profession {
     border-bottom: 1px solid var(--bg-black-50);
     color: var(--skin-color);
     padding: 10px 30px;
+    margin-top: 40px;
 }
 
 .about .about-content .skills .skill-item h4 {
@@ -374,9 +364,9 @@ h3.my-profession {
 
 .about .about-content .skills .skill-item  {
     display: flex;
-    justify-content: center;
     flex: 0 0 100%;
     max-width: 100%;
+    justify-content: center;
 }
 
 .about .about-content .education,
@@ -583,19 +573,11 @@ h3.my-profession {
     flex: 100%;
 }
 
-.contact-sub-title {
-    color: var(--text-black-900);
-    text-align: center;
-    font-size: 15px;
-    margin-top: 5px;
-    flex: 0 0 100%;
-}
-
 .contact-titles  {
     color: var(--skin-color);
     text-align: center;
     font-size: 20px;
-    margin-bottom: 30px;
+    margin-top: 40px;
     flex: 100%;
 }
 
@@ -603,7 +585,7 @@ h3.my-profession {
     flex: 0 0 25%;
     max-width: 25%;
     text-align: center;
-    margin-bottom: 50px;
+    margin-top: 30px;
 }
 
 .contact .contact-info-item .icon {
@@ -621,7 +603,7 @@ h3.my-profession {
     color: var(--text-black-900);
     text-transform: capitalize;
     margin: 15px 0 1px;
-    top: 10px;
+    top: 15px;
 }
 
 .contact .contact-info-item p {
@@ -635,6 +617,7 @@ h3.my-profession {
     flex: 0 0 100%;
     max-width: 100%;
     align-items: center;
+    margin-top: 50px;
 }
 
 .contact .contact-form .col-6  {
@@ -672,25 +655,91 @@ h3.my-profession {
     height: 100px;
 }
 
-.contact .contact-form .btn {
+.contact .contact-form .btn .btn-form{
     height: 50px;
     padding: 0 50px;
-    margin-left: 180%;
+    justify-content: center;
 }
 
 @media (max-width:1199px) {
+    .section .container {
+        padding-top: 70px;
+    }
 
     .aside {
         left: -270px;
     }
-    .main-content {
-        padding-left: 0;
+
+    .aside.open {
+        left: 0;
     }
+
+    .aside .toggle-btn {
+        display: flex;
+        left: 30px;
+    }
+
+    .aside .toggle-btn.open {
+        left: 300px;
+    }
+
+    .section {
+        left: 0;
+    }
+
+    .section.open {
+        left: 270px;
+    }
+
     .about .about-content .personal-info .info-item p span {
         display: block;
         margin-left: 0;
     }
+}
+ 
+@media (max-width:1024px) {
+    .section .container {
+        padding-top: 50px;
+    }
 
+    .aside {
+        left: -200px;
+    }
+
+    .aside.open {
+        left: 0;
+    }
+
+    .aside .toggle-btn {
+        display: flex;
+        left: 200px;
+    }
+
+    .aside .toggle-btn.open {
+        left: 200px;
+    }
+
+    .section {
+        left: 0;
+    }
+
+    .section.open {
+        left: 270px;
+    }
+
+    .about .about-content .education,
+    .about .about-content .experience {
+        flex: 0 0 95%;
+        max-width: 100%;
+        margin-top: 50px;
+    }
+
+    .contact .contact-info-item {
+        flex: 0 0 50%;
+        max-width: 50%;
+        text-align: center;
+        margin-top: 30px;
+    }
 }
 
 @media (max-width:991px) {
@@ -711,18 +760,26 @@ h3.my-profession {
 
 }
 
-@media (max-width:767px) {
+@media (max-width:768px) {
     .contact .contact-form .col-6,
     .contact .contact-info-item,
     .portfolio .portfolio-item,
     .service .service-item,
-    .about .about-content .experience,
-    .about.about-content .education,
-    .about .about-content .skills,
     .about .about-content .personal-info {
         flex: 0 0 100%;
         max-width: 100%;
 
+    }
+
+    .about .about-content .experience,
+    .about .about-content .education {
+        flex: 0 0 100%;
+        max-width: 95%;
+    }
+
+    .about .about-content .skills .skill-item {
+        font-size: 10px;
+        display: hidden;
     }
 
 }

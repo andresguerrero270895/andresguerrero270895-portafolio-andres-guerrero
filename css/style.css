@@ -706,6 +706,12 @@ h3.my-profession {
         display: block;
         margin-left: 0;
     }
+
+    .circle {
+        display: none;
+       
+    }
+    
 }
  
 @media (max-width:1024px) {
